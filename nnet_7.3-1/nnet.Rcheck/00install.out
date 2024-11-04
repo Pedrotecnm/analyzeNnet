@@ -1,0 +1,135 @@
+* installing *source* package 'nnet' ...
+** using staged installation
+** libs
+using C compiler: 'gcc.exe (GCC) 13.3.0'
+gcc  -I"C:/PROGRA~1/R/R-44~1.2/include" -DNDEBUG     -I"C:/rtools44/x86_64-w64-mingw32.static.posix/include"     -O2 -Wall  -mfpmath=sse -msse2 -mstackrealign  -c nnet.c -o nnet.o
+nnet.c:72:12: error: unknown type name 'Sint'; did you mean 'int'?
+   72 | VR_set_net(Sint *n, Sint *nconn, Sint *conn,
+      |            ^~~~
+      |            int
+nnet.c:72:21: error: unknown type name 'Sint'; did you mean 'int'?
+   72 | VR_set_net(Sint *n, Sint *nconn, Sint *conn,
+      |                     ^~~~
+      |                     int
+nnet.c:72:34: error: unknown type name 'Sint'; did you mean 'int'?
+   72 | VR_set_net(Sint *n, Sint *nconn, Sint *conn,
+      |                                  ^~~~
+      |                                  int
+nnet.c:73:27: error: unknown type name 'Sint'; did you mean 'int'?
+   73 |            double *decay, Sint *nsunits, Sint *entropy,
+      |                           ^~~~
+      |                           int
+nnet.c:73:42: error: unknown type name 'Sint'; did you mean 'int'?
+   73 |            double *decay, Sint *nsunits, Sint *entropy,
+      |                                          ^~~~
+      |                                          int
+nnet.c:74:12: error: unknown type name 'Sint'; did you mean 'int'?
+   74 |            Sint *softmax, Sint *censored)
+      |            ^~~~
+      |            int
+nnet.c:74:27: error: unknown type name 'Sint'; did you mean 'int'?
+   74 |            Sint *softmax, Sint *censored)
+      |                           ^~~~
+      |                           int
+nnet.c:116:11: error: unknown type name 'Sint'; did you mean 'int'?
+  116 | VR_nntest(Sint *ntest, Sdata *test, Sdata *result, double *inwts)
+      |           ^~~~
+      |           int
+nnet.c:435:9: error: unknown type name 'Sint'; did you mean 'int'?
+  435 | VR_dovm(Sint *ntr, Sdata *train, Sdata *weights,
+      |         ^~~~
+      |         int
+nnet.c:436:9: error: unknown type name 'Sint'; did you mean 'int'?
+  436 |         Sint *Nw, double *wts, double *Fmin,
+      |         ^~~~
+      |         int
+nnet.c:437:9: error: unknown type name 'Sint'; did you mean 'int'?
+  437 |         Sint *maxit, Sint *trace, Sint *mask,
+      |         ^~~~
+      |         int
+nnet.c:437:22: error: unknown type name 'Sint'; did you mean 'int'?
+  437 |         Sint *maxit, Sint *trace, Sint *mask,
+      |                      ^~~~
+      |                      int
+nnet.c:437:35: error: unknown type name 'Sint'; did you mean 'int'?
+  437 |         Sint *maxit, Sint *trace, Sint *mask,
+      |                                   ^~~~
+      |                                   int
+nnet.c:597:14: error: unknown type name 'Sint'; did you mean 'int'?
+  597 | VR_nnHessian(Sint *ntr, Sdata *train, Sdata *weights,
+      |              ^~~~
+      |              int
+nnet.c:654:10: error: unknown type name 'Sint'; did you mean 'int'?
+  654 | VR_summ2(Sint *n0, Sint *p0, Sint *q0, Sdata *Z, Sint *na)
+      |          ^~~~
+      |          int
+nnet.c:654:20: error: unknown type name 'Sint'; did you mean 'int'?
+  654 | VR_summ2(Sint *n0, Sint *p0, Sint *q0, Sdata *Z, Sint *na)
+      |                    ^~~~
+      |                    int
+nnet.c:654:30: error: unknown type name 'Sint'; did you mean 'int'?
+  654 | VR_summ2(Sint *n0, Sint *p0, Sint *q0, Sdata *Z, Sint *na)
+      |                              ^~~~
+      |                              int
+nnet.c:654:50: error: unknown type name 'Sint'; did you mean 'int'?
+  654 | VR_summ2(Sint *n0, Sint *p0, Sint *q0, Sdata *Z, Sint *na)
+      |                                                  ^~~~
+      |                                                  int
+nnet.c:687:28: error: 'VR_dovm' undeclared here (not in a function)
+  687 |     {"VR_dovm", (DL_FUNC) &VR_dovm, 12},
+      |                            ^~~~~~~
+nnet.c:688:33: error: 'VR_nnHessian' undeclared here (not in a function)
+  688 |     {"VR_nnHessian", (DL_FUNC) &VR_nnHessian, 5},
+      |                                 ^~~~~~~~~~~~
+nnet.c:689:30: error: 'VR_nntest' undeclared here (not in a function)
+  689 |     {"VR_nntest", (DL_FUNC) &VR_nntest, 4},
+      |                              ^~~~~~~~~
+nnet.c:690:31: error: 'VR_set_net' undeclared here (not in a function); did you mean 'VR_unset_net'?
+  690 |     {"VR_set_net", (DL_FUNC) &VR_set_net, 8},
+      |                               ^~~~~~~~~~
+      |                               VR_unset_net
+nnet.c:691:29: error: 'VR_summ2' undeclared here (not in a function)
+  691 |     {"VR_summ2", (DL_FUNC) &VR_summ2, 5},
+      |                             ^~~~~~~~
+nnet.c:641:1: warning: 'Zcompar' defined but not used [-Wunused-function]
+  641 | Zcompar(const Sdata *a, const Sdata *b)
+      | ^~~~~~~
+nnet.c:638:15: warning: 'q' defined but not used [-Wunused-variable]
+  638 | static int p, q;
+      |               ^
+nnet.c:453:1: warning: 'pHessian' defined but not used [-Wunused-function]
+  453 | pHessian(Sdata *input, Sdata *goal, Sdata wx, int nr)
+      | ^~~~~~~~
+nnet.c:422:1: warning: 'free_Lmatrix' defined but not used [-Wunused-function]
+  422 | free_Lmatrix(double **m, int n)
+      | ^~~~~~~~~~~~
+nnet.c:408:1: warning: 'Lmatrix' defined but not used [-Wunused-function]
+  408 | Lmatrix(int n)
+      | ^~~~~~~
+nnet.c:398:1: warning: 'free_matrix' defined but not used [-Wunused-function]
+  398 | free_matrix(double **m, int nrh, int nch)
+      | ^~~~~~~~~~~
+nnet.c:384:1: warning: 'matrix' defined but not used [-Wunused-function]
+  384 | matrix(int nrh, int nch)
+      | ^~~~~~
+nnet.c:378:1: warning: 'free_vect' defined but not used [-Wunused-function]
+  378 | free_vect(double *v)
+      | ^~~~~~~~~
+nnet.c:369:1: warning: 'vect' defined but not used [-Wunused-function]
+  369 | vect(int n)
+      | ^~~~
+nnet.c:348:1: warning: 'fmingr' defined but not used [-Wunused-function]
+  348 | fmingr(int nn, double *p, double *df, void *dummy)
+      | ^~~~~~
+nnet.c:326:1: warning: 'fminfn' defined but not used [-Wunused-function]
+  326 | fminfn(int nn, double *p, void *dummy)
+      | ^~~~~~
+nnet.c:141:1: warning: 'Build_Net' defined but not used [-Wunused-function]
+  141 | Build_Net(int ninputs, int nhidden, int noutputs)
+      | ^~~~~~~~~
+nnet.c:64:12: warning: 'NTest' defined but not used [-Wunused-variable]
+   64 | static int NTest;
+      |            ^~~~~
+make: *** [C:/PROGRA~1/R/R-44~1.2/etc/x64/Makeconf:289: nnet.o] Error 1
+ERROR: compilation failed for package 'nnet'
+* removing 'C:/Users/pedro/Documents/analisis_nnet/nnet_7.3-1/nnet.Rcheck/nnet'
